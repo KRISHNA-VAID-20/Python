@@ -1,112 +1,114 @@
-#Calculator by kv
+# Calculator by Krishna
 
-# running = True
-# while running:
+running = True
+while running:
 
-#     try:
+    try:
 
 
-#         a= int(input("Enter a number : "))
-#         b= int(input("Enter a number : "))
-#         c= input("Enter operand (+,-,*,/) :")
-#         if c =="+":
-#             print(a+b)
-#         elif c=="-":
-#             print(a-b)
-#         elif c=="*":
-#             print(a*b)
-#         elif c=="/":
-#             print(a/b)
-#         else:
-#             print("Invalid input !")
-#             print("Select operand (+,-,*,/) :")
-#         if not input("Try again ? (y/n) :").upper()=="Y":
-#                 running = False
-#                 print("shukriya pra g :)")
+        a= int(input("Enter a number : "))
+        b= int(input("Enter a number : "))
+        c= input("Enter operand (+,-,*,/) :")
+        if c =="+":
+            print(a+b)
+        elif c=="-":
+            print(a-b)
+        elif c=="*":
+            print(a*b)
+        elif c=="/":
+            print(a/b)
+        else:
+            print("Invalid input !")
+            print("Select operand (+,-,*,/) :")
+        if not input("Try again ? (y/n) :").upper()=="Y":
+                running = False
+                print("shukriya pra g :)")
         
-#     except ValueError:
-#         print("Only numbers are allowed !")    
+    except ValueError:
+        print("Only numbers are allowed !")    
 
 
-#Python Number guessing Game ------
-# import time
-# import random
-# lowest_num = 1
-# Highest_num = 100
-# answer=random.randint(lowest_num,Highest_num)
-# guesses= 0
+# Python Number guessing Game ------
+
+import time
+import random
+lowest_num = 1
+Highest_num = 100
+answer=random.randint(lowest_num,Highest_num)
+guesses= 0
 # print("******************************************************")
-# print("Let's Start Number guessing Game :) ")
+print("Let's Start Number guessing Game :) ")
+print("\n")
 # print("******************************************************")
-# print(f"Select a number between {lowest_num} and {Highest_num} ")
-# print("******************************************************")
-# print("Game is starting in :")
-# for i in range(3,0,-1):
-#     time.sleep(2)
-#     print(i)
-# isrunning= True
-# n= input("Enter your name  :" )
-# while isrunning:
-#     guess= input("Enter your guess :")
-#     if guess.isdigit():
-#         guess=int(guess)
-#         guesses+=1
-#         if guess < lowest_num or guess > Highest_num:
-#             print("This number is out of given range ")
-#         elif guess < answer:
-#             print("Too low ! ")
-#         elif guess > answer:
-#             print("Too  high !")
-#         else:
-#             print("------------------------")
-#             print("Correct Answer :)")
-#             print("------------------------")
-#             print(f"The answer was : {answer}")
-#             print(f"No. of guesses you took : {guesses}")
-#             if not input("Wanna play again ? (y/n) : ").upper() == "Y":
-#                 isrunning= False
-#             print(f"Thnx for playing {n} :)")
-#     else:
-#         print("Invalid Input ") 
-#         print(f"Select a number between {lowest_num} and {Highest_num}  ")     
+print(f"Select a number between {lowest_num} and {Highest_num} ")
+print("******************************************************")
+print("Game is starting in :")
+for i in range(3,0,-1):
+    time.sleep(1)
+    print(i)
+isrunning= True
+n= input("Enter your name  : " )
+while isrunning:
+    guess= input("Enter your guess :")
+    if guess.isdigit():
+        guess=int(guess)
+        guesses+=1
+        if guess < lowest_num or guess > Highest_num:
+            print("This number is out of given range ")
+        elif guess < answer:
+            print("Too low ! ")
+        elif guess > answer:
+            print("Too  high !")
+        else:
+            print("------------------------")
+            print("Correct Answer :)")
+            print("------------------------")
+            print(f"The answer was : {answer}")
+            print(f"No. of guesses you took : {guesses}")
+            if not input("Wanna play again ? (y/n) : ").upper() == "Y":
+                isrunning= False
+            print(f"Thnx for playing {n} :)")
+    else:
+        print("Invalid Input ") 
+        print(f"Select a number between {lowest_num} and {Highest_num}  ")     
 
 #-----------------------------------------------------------------------------------------------------------
 
 #2- Rock paper and scissors Game ---------
-# import random
-# import time
-# options= ("rock","paper","scissors")
-# n= input("Enter your good name :) - ")
-# print("Game is starting in :")
+import random
+import time
+options= ("rock","paper","scissors")
+n= input("Enter your good name :) - ")
+print("Game is starting in :")
 
-# for i in range(3,0,-1):
-#     print(i)
-#     time.sleep(0.1)
-# running= True
+for i in range(3,0,-1):
+    print(i)
+    time.sleep(1)
+running= True
 
-# while running:
-#     player= None
-#     computer= random.choice(options)
-#     while player not in options:
-#         player = (input("Enter your choice (rock,paper,scissors) : ").lower())
-#     print(f'Your choice : {player}')
-#     print(f'computer choice : {computer}')
+while running:
+    player= None
+    computer= random.choice(options)
+    while player not in options:
+        player = (input("Enter your choice (rock,paper,scissors) : ").lower())
+    print(f'Your choice : {player}')
+    print(f'computer choice : {computer}')
 
-#     if player==computer:
-#         print("It's a tie !")
-#     elif player == "rock" and computer == "scissors":
-#         print("You won !")
-#     elif player == "paper" and computer == "rock":
-#         print("You won !")
-#     elif player == "scissors" and computer == "paper":
-#         print("You won !")
-#     else:
-#         print("You lose !")
+    if player==computer:
+        print("It's a tie !")
+    elif player == "rock" and computer == "scissors":
+        print("You won !")
+    elif player == "paper" and computer == "rock":
+        print("You won !")
+    elif player == "scissors" and computer == "paper":
+        print("You won !")
+    else:
+        print("You lose !")
 
-#     if not (input ("Wanna play again ? (y/n) : ").lower()) == "y":
-#         running = False
+    if not (input ("Wanna play again ? (y/n) : ").lower()) == "y":
+        running = False
     
-# print(f"Thanks for playing {n}:)")                  
+print(f"Thanks for playing {n}:)")                  
 
 #-----------------------------------------------------------------------------------------------------
 
@@ -163,6 +165,8 @@
 #--------------------------------------------------------------------------------------------
 
 # Slot Machine :
+
+# Incomplete :( 
 
 # def spin_row():
 #     pass
